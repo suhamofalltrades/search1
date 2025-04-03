@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+        <h1 class="mb-4">About Me</h1>
+        
+        <div class="card bg-dark border-secondary mb-4">
+            <div class="card-body text-center">
+                <h2 class="h4 mb-3">Find Me Online</h2>
+                
+                <div class="d-flex justify-content-center gap-4 mb-4">
+                    <a href="https://github.com/suhamofalltrades" target="_blank" class="btn btn-outline-light btn-lg">
+                        <i class="fab fa-github me-2"></i>GitHub
+                    </a>
+                    <a href="https://instagram.com/suhamofalltrades" target="_blank" class="btn btn-outline-light btn-lg">
+                        <i class="fab fa-instagram me-2"></i>Instagram
+                    </a>
+                </div>
+                
+                <p class="lead">Check out my projects and connect with me on social media</p>
+                
+                <div class="mt-4">
+                    <a href="mailto:me@suhamofalltrades.mywire.org" class="btn btn-primary">
+                        <i class="fas fa-envelope me-2"></i>Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card bg-dark border-secondary">
+            <div class="card-body">
+                <h2 class="h4 mb-3">About Colossus</h2>
+                <p>Colossus is a metasearch engine built by me, Suham. It aggregates results from multiple search providers:</p>
+                
+                <ul>
+                    <li>Google</li>
+                    <li>Bing</li>
+                    <li>DuckDuckGo</li>
+                    <li>Yahoo</li>
+                    <li>Brave Search</li>
+                </ul>
+                
+                <p>Colossus queries these sources simultaneously and combines the results for a comprehensive search experience without tracking or storing your data.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

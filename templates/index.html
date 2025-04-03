@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Colossus - Metasearch Engine{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6 text-center">
+        <div class="mb-5 mt-5">
+            <h1 class="display-4 mb-3">Colossus</h1>
+        </div>
+
+        {% if error %}
+        <div class="alert alert-danger mb-4">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <!-- Search Form -->
+        <div class="search-container">
+            <form action="/search" method="get" class="mb-5">
+                <div class="input-group input-group-lg">
+                    <input 
+                        type="text" 
+                        name="q" 
+                        class="form-control" 
+                        placeholder="Search the web..." 
+                        aria-label="Search query" 
+                        autocomplete="off" 
+                        autofocus
+                        required
+                    >
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="text-start mt-3">
+                    <div class="mb-2">
+                        <a class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" href="#advancedOptions">
+                            Advanced Options <i class="fas fa-caret-down ms-1"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="collapse" id="advancedOptions">
+                        <div class="card card-body bg-dark border-secondary">
+                            <h5 class="mb-3">Search Engines</h5>
+                            <div class="row">
+                                {% for engine in engines %}
+                                <div class="col-6 col-md-4 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="engines" value="{{ engine }}" id="engine-{{ engine }}" checked>
+                                        <label class="form-check-label" for="engine-{{ engine }}">
+                                            {{ engine|capitalize }}
+                                        </label>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Contact link at bottom of page -->
+        <div class="mt-5">
+            <p>
+                <a href="mailto:me@suhamofalltrades.mywire.org" class="text-light">
+                    <i class="fas fa-envelope me-1"></i> Contact Me
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- No additional scripts needed -->
+{% endblock %}
