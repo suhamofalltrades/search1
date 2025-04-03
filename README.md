@@ -6,10 +6,8 @@ A powerful metasearch engine that aggregates results from multiple search provid
 
 - Multi-engine search capabilities
 - Automatic result aggregation
-- AI-powered "Key Insights" summary of search results using OpenAI
 - Comprehensive image search from multiple sources
 - Clean, responsive user interface
-- No tracking or data collection
 
 ## Deployment Instructions
 
@@ -31,7 +29,6 @@ Alternatively, you can deploy directly from the Vercel dashboard by connecting y
 The application needs the following environment variables:
 
 - `SESSION_SECRET`: A random string used for securing the application (optional, but recommended)
-- `OPENAI_API_KEY`: Your OpenAI API key for generating AI summaries of search results (required)
 
 ## Local Development
 
