@@ -7,13 +7,10 @@
       "maxDuration": 60
     }
   },
-  "redirects": [],
-  "headers": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
-      ]
+      "src": "/(.*)",
+      "dest": "/main.py"
     }
   ],
   "regions": ["iad1"]
